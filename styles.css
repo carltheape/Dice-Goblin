@@ -1,0 +1,88 @@
+*{
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    text-align: center;
+}
+#die-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#die-control-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dice-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.result-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.dice-section div, .dice-section button, #results .result{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin: 5px;
+}
+.dice-section div span, .dice-section button span{
+    height: fit-content;
+    margin: auto;
+    font-size: 22px;
+}
+.dice-section .d-count{
+    padding: 0 5px;
+}
+.dice-section svg{
+    position: absolute;
+    opacity: .4;
+}
+#rollem{
+    padding: 15px 25px;
+}
+
+#results .result{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, .5);
+    background-blend-mode: lighten;
+}
+#results span{
+    height: auto;
+    display: block;
+    margin: auto;
+}
+#results .result-4{
+    background-image: url(d4-dice.svg);
+}
+#results .result-6{
+    background-image: url(d6-dice.svg);
+}
+#results .result-8{
+    background-image: url(d8-dice.svg);
+}
+#results .result-10{
+    background-image: url(d10-dice.svg);
+}
+#results .result-12{
+    background-image: url(d12-dice.svg);
+}
+#results .result-20{
+    background-image: url(d20-dice.svg);
+}
