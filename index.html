@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Dice Goblin</h1>
+    <header>
+        <img src="./images/Dice Goblin 2.png" alt="dice-goblin" class="gobo-logo">
+        <h1>Dice Goblin</h1>
+    </header>
     <div id="die-container">
         <div id="dice-wrapper">
             <div id="die-adjustment-wrapper">
@@ -24,7 +27,7 @@
                 </div>
                 <div class="die-adjustment" title="If you know you know ;)">
                     <input type="checkbox" class="toggle" id="bobble">
-                    <label for="bobble">Bobble Head Mode</label>
+                    <label for="bobble">Bobble Head</label>
                 </div>
             </div>
             <div id="die-control-wrapper">
@@ -203,10 +206,12 @@
                 </div>
             </div>
         </div>
-        <section id="results" class="result-section">
-        </section>
-        <section id="resultsDetails">
-        </section>
+        <div id="results-wrapper">
+            <section id="results" class="result-section">
+            </section>
+            <section id="resultsDetails">
+            </section>
+        </div>
     </div>
     <div class="overlay"></div>
 </body>
