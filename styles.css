@@ -1,4 +1,12 @@
 
+:root {
+    --goblin-green: #72A854;
+}
+body{
+    margin: 0;
+    background-image: url("./images/gambling-dice.png");
+    background-color: rgba(114, 168, 84, 0.4);
+}
 *{
     font-family: "Freeman", sans-serif;
     font-weight: 400;
@@ -7,14 +15,16 @@
 header{
     display: flex;
     flex-direction: row;
+    margin: 35px 0;
 }
 .gobo-logo{
     height: 200px;
     margin-left: auto;
 }
 h1{
+    font-size: 6rem;
     text-align: center;
-    margin: auto auto auto 0;
+    margin: auto auto auto 15px;
 }
 #die-container{
     display: flex;
@@ -22,14 +32,14 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 50px;
 }
 #dice-wrapper{
     display: flex;
     flex-direction: row;
 }
 .die-adjustment{
-    padding: 10px;
+    padding: 10px 10px 10px 35px;
+    
 }
 .die-adjustment input{
     position: relative;
@@ -54,7 +64,7 @@ h1{
     content: "";
     width: 50px;
     height: 25px;
-    background-color: green;
+    background-color: var(--goblin-green);
     position: absolute;
     transition: all .3s;
 }
@@ -96,6 +106,9 @@ h1{
     align-items: center;
     justify-content: center;
 }
+.dice-section.active button{
+    background-color: var(--goblin-green);
+}
 .result-section{
     display: flex;
     flex-direction: row;
@@ -115,10 +128,19 @@ h1{
 .drop{
     color: red;
 }
-.dice-section div span, .dice-section button span{
+.add{
+    color: var(--goblin-green);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.dice-section button span{
     height: fit-content;
     margin: auto;
     font-size: 22px;
+}
+.dice-section div span{
+    height: fit-content;
+    margin: auto;
+    font-size: 1.5rem;
 }
 .dice-section .d-count{
     padding: 0 5px;
@@ -137,13 +159,23 @@ h1{
 #results-wrapper{
     margin-right: auto;
     max-width: 50%;
+    border: solid 5px var(--goblin-green);
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 35px;
+    min-width: 250px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
 }
 #results{
     
 }
 #resultsDetails{
     text-align: center;
-    margin-right: auto;
+    margin-top: auto;
+    display: block;
 }
 #results .result{
     background-position: top;
@@ -151,11 +183,20 @@ h1{
     background-size: cover;
     background-color: rgba(255, 255, 255, .5);
     background-blend-mode: lighten;
+    transform: scale(1.5);
+    margin: 15px;
 }
 #results span{
     height: auto;
     display: block;
     margin: auto;
+}
+#results .result-2{
+    background-image: url(d2-dice.svg);
+}
+#results .result-2 img{
+    padding-top: 5px;
+    padding-right: 1px;
 }
 #results .result-4{
     background-image: url(d4-dice.svg);
@@ -175,12 +216,31 @@ h1{
 #results .result-20{
     background-image: url(d20-dice.svg);
 }
-
+.confetti{
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.4;
+}
 @media (max-width:642px)  { 
     #die-container{
         flex-direction: column;
     }
     #results-wrapper{
         max-width: 100%;
+    }
+    .gobo-logo{
+        height: 135px;
+    }
+    h1{
+        font-size: 3.3rem;
+    }
+    #results .result{
+        transform: scale(1.2);
+        margin: 5px;
     }
  }
